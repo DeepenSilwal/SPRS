@@ -1,14 +1,13 @@
 package com.software2.SPRS.controller;
 import com.software2.SPRS.model.User;
 import com.software2.SPRS.model.timeobject;
+import com.software2.SPRS.model.vechileobject;
 import com.software2.SPRS.service.Service;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -25,8 +24,8 @@ public class controller{
     }
 
     @GetMapping("/users/{vechile_no}")
-    public List<Object[]> viewoneuser(@PathVariable String vechile_no){
-        List<Object[]> user = service.getbyvechile_no(vechile_no);
+    public List<vechileobject> viewoneuser(@PathVariable String vechile_no){
+        List<vechileobject> user = service.getbyvechile_no(vechile_no);
         return user;
     }
 

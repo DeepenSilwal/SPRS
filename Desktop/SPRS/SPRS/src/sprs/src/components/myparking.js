@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import axios from 'axios';
-import {Button, Row, Col} from 'react-bootstrap';
+import {Button, Row, Col, Jumbotron, Container, Table} from 'react-bootstrap';
 
 class Myparking extends Component{
     constructor(props){
@@ -21,7 +21,6 @@ class Myparking extends Component{
 
    addvechile_no(e){
     e.preventDefault()
-        console.log(e.target.value)
         this.setState({
             vechile_no: e.target.value
         })
@@ -30,57 +29,46 @@ class Myparking extends Component{
 
     render(){
         return (
-            <div>
-                <ul>
-                    {this.state.datas.map(data=>
-                        <li>{data}</li>)}
-                </ul>
-                {this.state.vechile_no}
-                <form>
-                <label>
-                    Enter your vechile number
-                    <input type="text" name="vechile_no" placeholder="ABC1234" onChange={this.addvechile_no}/>
-                </label>
-                <Button variant="primary" type="submit" onClick={this.getvechile_no}>Submit</Button>
-            </form>
+            <div className="myparking">
+                <Container>
+                    <p>helo</p>
+                </Container>
+                <Jumbotron id="jumbo1">
+                <form align="center"> 
+                    <label>
+                         <h3 align="center">Enter Your Vechile Number</h3>
+                        <input type="text" name="vechile_no" placeholder="ABC1234" onChange={this.addvechile_no}/>
+                    </label>
+                    <Button variant="primary" type="submit" onClick={this.getvechile_no}>Submit</Button>
+                </form>
+                </Jumbotron>
+                <Jumbotron id = "jumbo1">
+                    <ul>
+                    <Table responsive id ="table"> 
+                            <thead>             
+                                <th >Name</th>               
+                                <th >Start Time</th>
+                                <th >End Time</th>
+                                <th >Vechile No</th>
+                            </thead>
+                            <tbody>
+                            {this.state.datas.map(data=>                                 
+                                 <tr>
+                                    <td>{data.fname + " "}{data.lname}</td>
+                                    <td>{data.start_time}</td>
+                                    <td>{data.end_time}</td> 
+                                     <td>{data.vechile_no}</td>                  
+                                </tr>
+                                )}
+                            </tbody>
+                        </Table>
+                        
+                    </ul> 
+                </Jumbotron>
             </div>
 
         );
     }
-    /*
-    state={
-        vechile_no:'',
-    }
-
-    handleSubmit = event  =>{
-        event.preventDefaule();
-
-        const user={
-            vechile_no:this.state.vechile_no,
-        }
-
-        axios
-        .get(`http://localhost:8080/api/users/`,{user})
-        .then(res=>{
-            console.log(res);
-            console.log(res.data);
-        })
-    }
-
-    handlechange= event =>{
-        this.setState({name: event.target.value});
-    }
-
-    render(){
-        return(
-            <form>
-                <label>
-                    <input type="text" name="name" onChange={this.handlechange}/>
-                </label>
-                <button type="submit">Add</button>
-            </form>
-        )
-    }*/
 }
 
 export default Myparking;

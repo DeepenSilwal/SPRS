@@ -3,6 +3,7 @@ import './App.css';
 import fire from './loginconfig/fire';
 import LoginRegister from './components/LoginRegister';
 import Homepage from './components/HomePage';
+import { Container } from 'react-bootstrap';
 
 class App extends Component {
   constructor(){
@@ -29,7 +30,7 @@ class App extends Component {
 
   render(){
     return(
-      <div>
+      <div> 
         {this.state.user ? (<Homepage/>) : (<LoginRegister/>)}
       </div>
     );

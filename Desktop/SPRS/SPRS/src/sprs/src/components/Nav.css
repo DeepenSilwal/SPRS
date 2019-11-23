@@ -1,21 +1,38 @@
+
 .logout {
-    padding-left: 38em;
+    padding-left: 48em;
 }
 
-.mainpage{
-    margin: 2em;
-}
-.table{
-   
+
+#jumbo2{
+    margin:4em;
+    margin-top:2em;
 }
 
-.firsthead{
-    margin: 2em;
+#jumbo3{
+    margin:4em;
+}
+
+#row{
+    padding:-10em;
 }
 
 #parking{
-    margin: 1em;
-    width: 98%;
-    height: -10%;
+    height: 300px;
+    width: 380px;
 }
 
+#test{
+    margin-top:2em;
+    font-family: "Times New Roman", Times, serif;
+    clear: blue;
+
+}
+
+#jumbo1{
+    margin-top:6em;
+    margin-bottom:3em;
+    margin-right:4em;
+    margin-left:4em;
+    padding:2em;
+}

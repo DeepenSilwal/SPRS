@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { Jumbotron, Container } from 'react-bootstrap';
+import { Jumbotron, Container,Badge } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import {Button, Row, Col} from 'react-bootstrap';
 import Form from 'react-bootstrap/Form';
@@ -72,7 +72,7 @@ render(){
 
     let clicktochange = ()=>{
         this.setState({
-            registerclicked: true,
+            registerclicked: true
         });
     }
         
@@ -96,29 +96,41 @@ render(){
                     <Register value={this.state.datas}/>                   
                 </div>
             :
-        <div >
-
-        <img src={parking} id="parking"/>
-        <div class="mainpage">
-            <Jumbotron>
-                <div class="table">
-                    <Table responsive>               
-                        <thead>             
-                            <th >Start Time</th>               
-                            <th >End Time</th>
-                            <th >Amount</th>
-                        </thead>
-                        <tbody>
-                            {row}
-                        </tbody>
-                    </Table>
-                </div>
+        
+        <div className="Home" > 
+            <h1 id = "test" align="center" class="text-white">
+                S.P.R.S 
+             </h1> 
+             <h4 align="center" >Registration Made Easy </h4>     
+            <Jumbotron id ="jumbo2">
+            <Row id ="row">
+                        <Col id ="col1">
+                                <img src={parking} id="parking"/> 
+                        </Col>
+                        <Col>           
+                                <Table responsive id ="table">               
+                                    <thead>             
+                                        <th >Start Time</th>               
+                                        <th >End Time</th>
+                                        <th >Amount</th>
+                                    </thead>
+                                    <tbody>
+                                        {row}
+                                    </tbody>
+                                </Table>
+                            </Col>
+                        </Row>
             </Jumbotron>
+            <Jumbotron id="jumbo3">
+                <h4 align="center">Long Term Parking Starts From December 2019</h4>
+            </Jumbotron>
+
+           
         </div>
         
-        </div>
             }       
         </div>
+        
         
     );
     }

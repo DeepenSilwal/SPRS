@@ -2,6 +2,7 @@ package com.software2.SPRS.service;
 
 import com.software2.SPRS.model.User;
 import com.software2.SPRS.model.timeobject;
+import com.software2.SPRS.model.vechileobject;
 import com.software2.SPRS.repository.Repository;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -38,7 +39,7 @@ public class Service {
         return repository.findById(id).get();
     }
 
-    public List<Object[]> getbyvechile_no(String vechile_no){
+    public List<vechileobject> getbyvechile_no(String vechile_no){
         return repository.findByVechile_no(vechile_no);
     }
 

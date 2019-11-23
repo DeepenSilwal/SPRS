@@ -1,0 +1,23 @@
+#nav {
+   margin-bottom: 1em;
+}
+
+.Home {
+    background-image: url('./background1.jfif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:800px;
+    margin-top: -5em;
+}
+
+
+.myparking{
+    background-image: url('./parking.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:800px;
+    margin-top: -5em;
+
+}

@@ -6,6 +6,7 @@ import Form from 'react-bootstrap/Form'
 import cors from 'cors';
 import axios from "axios";
 import { any } from 'prop-types';
+import './navigation.css'
 
 class Register extends Component{
 
@@ -53,13 +54,9 @@ class Register extends Component{
 
     render(){
         return (
-            <div>
-                {this.state.fname}
-                {this.state.lname}
-                {this.state.start_time}
-                <Jumbotron>   
+            <div >
                     <Form>
-                        <Form.Row>
+                        <Form.Row>                  
                             <Form.Group as={Col} controlId="FirstName">
                             <Form.Label>FirstName </Form.Label>
                             <Form.Control type="text" placeholder="Enter First Name" onChange={this.nameChange} name="fname"/>
@@ -116,7 +113,7 @@ class Register extends Component{
                         </Form.Row>
                         <Button variant="primary" type="submit" onClick={this.handlesubmit}> Submit</Button>
                         </Form>
-                </Jumbotron>     
+                
             </div>
 
         );

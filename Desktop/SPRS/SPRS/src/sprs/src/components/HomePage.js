@@ -5,22 +5,23 @@ import Myparking from './myparking';
 import Sixmonthspark from './6monthspark';
 import Home from './home';
 import Navigation from './Nav';
-
+import './navigation.css'
 
 
 class Homepage extends Component{
     render(){
         return (
-            <div className="Home">
+            <div >
                 <Navigation/>
-                <Router>
+                <div>
+                <Router >
                     <Switch>
                         <Route path="/" exact component={Home}/>
                         <Route path="/myparking" component={Myparking}/>
                         <Route path="/sixmonthspark" component={Sixmonthspark}/>
                     </Switch>
                 </Router>
-
+                </div>
             </div>
            
 
