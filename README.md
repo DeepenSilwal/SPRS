@@ -1,5 +1,5 @@
 # SPRS
-software 2 project
+## software 2 project
 This is a Smart Parking Reservation System Project carried out for software 2.
 The system provides parking spaces for user. The user can choose between long term parking and short term parking. Long term parking
 is for 6 months reservation and short term parking may range from 1 hour to 2-3 hours. The goal of this project is to provide unique
